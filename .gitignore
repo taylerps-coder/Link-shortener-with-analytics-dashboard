@@ -1,3 +1,5 @@
+# Rename this file to .gitignore (GitHub strips the dot from uploadteded gitignore files)
+
 # Dependencies
 node_modules/
 .pnp
@@ -42,3 +44,4 @@ coverage/
 
 # Misc
 *.tsbuildinfo
+.turbo/

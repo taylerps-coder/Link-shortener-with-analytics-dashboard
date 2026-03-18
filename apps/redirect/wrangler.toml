@@ -1,0 +1,22 @@
+name = "linksnap-redirect"
+main = "src/index.ts"
+compatibility_date = "2024-03-14"
+compatibility_flags = ["nodejs_compat"]
+
+# Bindings — set secrets with: wrangler secret put REDIS_URL
+[vars]
+APP_DOMAIN = "linksnap.vercel.app"
+PROXY_CNAME_TARGET = "proxy.sho.rt"
+
+[[kv_namespaces]]
+binding = "LINKSNAP_KV"
+# id = "your-kv-namespace-id-here"
+# preview_id = "your-preview-kv-namespace-id-here"
+id = "PLACEHOLDER_KV_ID"
+preview_id = "PLACEHOLDER_KV_PREVIEW_ID"
+
+[build]
+command = "npm run build"
+
+[dev]
+port = 8787
